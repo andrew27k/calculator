@@ -4,9 +4,9 @@
 
 This Calculator supports:
 
- - Item ✅ -> Calculate with [+ - * /]
- - Item ✅ -> Round decimal places to two decimal places
- - Item ✅ -> Deleting individual numbers
- - Item ✅ -> Delete all
- - Item ✅ -> Entering decimal numbers
- - Item ✅ -> Keyboard support
+ - ✅ -> Calculate with [+ - * /]
+ - ✅ -> Round decimal places to two decimal places
+ - ✅ -> Deleting individual numbers
+ - ✅ -> Delete all
+ - ✅ -> Entering decimal numbers
+ - ✅ -> Keyboard support
