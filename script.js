@@ -12,7 +12,14 @@ numberButtons.forEach(key => {
        if (e.target.id !== "del") {
             if(e.target.id == "ac"){
                 output.textContent = ''
+            }else if(e.target.value.match(/^[.]$/)){
+                if(displayContext[0].includes('.') == false){
+                    output.textContent += e.target.value;
+                }else if(displayContext[2].includes('.') == false){
+                    output.textContent += e.target.value;
+                }
             }else {
+                
                 output.textContent += e.target.value;
             }
         } else {
@@ -30,9 +37,10 @@ operatorButtons.forEach(key => {
 
         if(e.target.value.match(/^[/ + * -]$/)){
             if(displayContext[0] == ""){
-                if(e.target.value.match(/^[-]$/)){
-                    output.textContent = e.target.value
-                    
+                if(displayContext[0].includes('-') == false){
+                    if(e.target.value.match(/^[-]$/)){
+                        output.textContent = e.target.value;
+                    }
                 }
             } else {
                 if(displayContext[1] !== undefined) {
