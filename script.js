@@ -49,6 +49,8 @@ operatorButtons.forEach(key => {
                 let num2 = Number(displayContext[2]);
 
                 operate(num1, oper, num2);
+
+                output.textContent += ' ' + e.target.value + ' '
                 } else {
                     output.textContent += ' ' + e.target.value + ' '
                 }
@@ -88,6 +90,8 @@ addEventListener('keydown', (e) => {
             let num2 = Number(displayContext[2]);
 
             operate(num1, oper, num2);
+
+            output.textContent += ' ' + e.key + ' '
             } else {
                 output.textContent += ' ' + e.key + ' '
             }
@@ -119,17 +123,17 @@ addEventListener('keydown', (e) => {
 
 
 let deleteNumber = (charArr) => {
-    
     for(let i = charArr.length - 1; i >= 0; i--){
         if(charArr[i].length > 0) {
             charArr[i] = charArr[i].slice(0, -1);
 
             if(charArr[i] === ""){
-                charArr.splice(i, 1)
+                charArr.splice(i , 1)
 
                 if(i>0 && ["-", "+", "*", "/"].includes(charArr[i - 1])){
                     charArr.splice(i -1);
                 }
+
             }else if(charArr[i].trim() === ""){ 
                 charArr.splice(i, 1)
             }
@@ -137,7 +141,9 @@ let deleteNumber = (charArr) => {
             break;
         }
     }
-        return output.textContent = charArr.join(' ');
+
+    console.log(charArr)
+    return output.textContent = charArr.join(' ');
 }
 
 
